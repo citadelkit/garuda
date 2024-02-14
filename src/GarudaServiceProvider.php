@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace CitadelKit\Garuda;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use CitadelKit\Garuda\Commands\GarudaCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class GarudaServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('garuda')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_garuda_table')
+            ->hasCommand(GarudaCommand::class);
     }
 }

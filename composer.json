@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "citadelkit/garuda",
+    "description": "Garuda Admin Panel",
     "keywords": [
-        ":vendor_name",
+        "citadelkit",
         "laravel",
-        ":package_slug"
+        "garuda"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/citadelkit/garuda",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "itszun",
+            "email": "malikal.j4@gmail.com",
             "role": "Developer"
         }
     ],
@@ -30,24 +30,29 @@
         "pestphp/pest-plugin-laravel": "^2.0",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "spatie/laravel-ray": "^1.26"
+        "phpstan/phpstan-phpunit": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "CitadelKit\\Garuda\\": "src/",
+            "CitadelKit\\Garuda\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "CitadelKit\\Garuda\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
+    "funding": [
+        {
+            "type": "trakteer",
+            "url": "https://trakteer.id/citadelkit/tip"
+        }
+    ],
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-garuda --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -73,10 +78,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "CitadelKit\\Garuda\\GarudaServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "Garuda": "CitadelKit\\Garuda\\Facades\\Garuda"
             }
         }
     },

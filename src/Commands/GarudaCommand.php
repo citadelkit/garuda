@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace CitadelKit\Garuda\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class GarudaCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'garuda';
 
     public $description = 'My command';
 
