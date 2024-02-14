@@ -4,4 +4,5 @@ namespace CitadelKit\Garuda;
 
 class Garuda
 {
+    
 }
